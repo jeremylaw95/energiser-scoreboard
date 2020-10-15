@@ -1,5 +1,6 @@
 // import query
 const { query } = require("../index");
+
 // run query to make table
 const sqlStatement = `
 CREATE TABLE leaderboard (

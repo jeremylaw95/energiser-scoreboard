@@ -1,16 +1,15 @@
-// Makes the environment variables work - Often the cause of ECONNREFUSED if not here!
+// Bring in dependencies
 require('dotenv').config()
-
-// db config
 const { Pool } = require("pg");
 
+// Db pool
 const pool = new Pool({
   ssl: {
     rejectUnauthorized: false,
   },
 });
 
-// export query function for use in app
+// Export query function for use in app
 module.exports = {
   query: (sql, values, callback) => pool.query(sql, values, callback)
 };
