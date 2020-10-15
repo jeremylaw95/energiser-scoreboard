@@ -14,8 +14,8 @@
 
 //////// API ////////
 
-// Init Node Project - NPX express generator --no -- views (DONE)
-// Database - Fields Name & Score 
+// (DONE) Init Node Project - NPX express generator --no -- views 
+// (DONE) Database - Fields Name & Score 
 
 // Model Functions
 1$      Add Player (with a score optional, 0 if no score given)
