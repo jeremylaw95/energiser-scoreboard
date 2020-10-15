@@ -16,7 +16,6 @@ router.get("/:id", async function (req, res) {
 
 router.post("/name", async function (req, res) {
     const {name} = req.body;
-    //console.log(req.body)
     const player = await getPlayerByName(name);
     res.json({ success: true, payload: player });
 });
