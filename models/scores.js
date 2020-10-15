@@ -13,30 +13,38 @@ const { query } = require("../db/index");
 
 async function addPlayer(name, score = 0) {
     const result = await query("INSERT INTO scores(name, score) VALUES ($1,$2) RETURNING id;", [name, score]);
-    console.log(result);
+    //console.log(result);
     return result.rows[0].id;
 }
 
 async function getScores() {
     const result = await query("SELECT * FROM scores");
-    console.log(result);
+    //console.log(result);
     return result;
 }
 
 async function getPlayerById(id) {
     const result = await query("SELECT * FROM scores WHERE id = $1;", [id]);
-    console.log(result);
+    //console.log(result);
     return result;
 }
 
 async function getPlayerByName(name) {
     const result = await query("SELECT * FROM scores WHERE name = $1;", [name]);
-    console.log(result);
+    //console.log(result);
     return result;
 }
 
 async function updatePlayerScoreByID(id, score) {
     const result = await query("UPDATE scores SET score = $2 WHERE id = $1;", [id, score]);
-    console.log(result);
+    //console.log(result);
     return result;
 }
+
+module.exports = {
+    addPlayer,
+    getScores,
+    getPlayerById,
+    getPlayerByName,
+    updatePlayerScoreByID
+  };
