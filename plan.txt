@@ -1,0 +1,45 @@
+//////// Design & User Experience ////////
+
+// MVP
+// 2 fields - Name & Score
+
+
+// Intermediate version
+// Track scores for individual games
+
+
+// Advanced version
+// Multiple tables - Table for Participants, Table for Games
+
+
+//////// API ////////
+
+// Init Node Project - NPX express generator --no -- views
+// Database - Fields Name & Score
+
+// Model Functions
+1$      Add Player (with a score optional, 0 if no score given)
+4&      Get all table - returns all the scores
+2(      Get an individual players score
+7*      Get top 5
+3.3^    Update Player Name
+5%      Update Score (select a player and add +/- N to their score)
+
+
+// Routes
+1. GET
+2. POST
+3. PUT
+4. DELETE
+
+
+//////// Front End ////////
+
+MVP:
+Title: Energiser Leaderboard
+Ordered List - List Items pulled from the table sorted by the Front End
+A little bit of styling
+
+
+Iteration 1:
+2 fields + Button - Name and Score and Submit
