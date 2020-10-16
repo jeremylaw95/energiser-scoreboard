@@ -1,14 +1,15 @@
 // DOM elements
 const table = document.querySelector("table");
 const button = document.querySelector("button");
-const inputName =  document.querySelector("#name");
-const inputScore = document.querySelector("#score");
+button.addEventListener("click", postScore);
+const form = document.querySelector("#postData");
+const inputName =  document.querySelector("#name").value;
+const inputScore = document.querySelector("#score").value;
 
 // Load scores into table
 async function getScores() {
     const data = await fetch("http://localhost:3000/scores");
     const result = await data.json();
-    console.log(result.data.rows);
     scores = result.data.rows;
     scores.sort((a, b) => b.score - a.score)
     for (let i = 0; i < scores.length; i++) {
@@ -26,6 +27,12 @@ async function getScores() {
     }
 }
 
+function postScore() {
+    //body:JSON.stringify({tittle:tittle, body:body})
+    const data = {name: inputName, score: inputScore};
+    console.log(data)
+}
 
+postScore()
 
 getScores()
