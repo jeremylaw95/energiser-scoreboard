@@ -41,10 +41,19 @@ async function updatePlayerScoreByID(id, score) {
     return result;
 }
 
+async function updatePlayerNameByID(id, name) {
+    const result = await query("UPDATE scores SET name = $2 WHERE id = $1;", [id, name]);
+    //console.log(result);
+    return result;
+}
+
+updatePlayerNameByID(4, "Sebastien");
+
 module.exports = {
     addPlayer,
     getScores,
     getPlayerById,
     getPlayerByName,
-    updatePlayerScoreByID
+    updatePlayerScoreByID,
+    updatePlayerNameByID
   };
