@@ -9,7 +9,7 @@ const inputScore = document.querySelector("#score");
 const updateButton = document.querySelector("#updateScore")
 updateButton.addEventListener("click", updateScore)
 const dropDown = document.querySelector("select");
-const inputNewScore = document.querySelector("#newScore");
+const newScore = document.querySelector("#newScore");
 
 // Load scores into table
 async function getScores() {
@@ -39,7 +39,7 @@ async function getScores() {
 // Add a new name and score
 async function postScore() {
 
-    const data = { name: inputName.value, score: inputScore.value };
+    const data = { name: dropDown.value, score: inputScore.value };
 
     // Post data to our API
     const postData = await fetch('http://localhost:3000/scores', {
@@ -52,5 +52,25 @@ async function postScore() {
     const result = await postData.json();
     console.log(result);
 }
+
+
+// Add a new score to an existing name
+async function updateScore() {
+
+    const data = { name: dropDown.value, score: newScore.value };
+    console.log(data)
+
+    // Put data to our API
+    const putData = await fetch('http://localhost:3000/scores', {
+        method: 'put',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    });
+
+    // For the console log
+    const result = await putData.json();
+    console.log(result);
+}
+
 
 getScores()

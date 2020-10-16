@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { addPlayer, getScores, getPlayerById, getPlayerByName, updatePlayerScoreByID } = require("../models/scores");
+const { addPlayer, getScores, getPlayerById, getPlayerByName, updatePlayerScoreByID, updatePlayerScoreByName } = require("../models/scores");
 
 router.get("/", async function (req, res, next) {
   const scores = await getScores();
@@ -28,9 +28,9 @@ router.post("/", async function (req, res) {
 });
 
 router.put("/", async function (req, res) {
-  const { id, score } = req.body;
-  const result = await updatePlayerScoreByID(id, score);
-  res.json({ success: true, message: `Player with id:${id} now has a score of ${score}` });
+  const { name, score } = req.body;
+  const result = await updatePlayerScoreByName(name, score);
+  res.json({ success: true, message: `Player with id:${name} now has a score of ${score}` });
 });
 
 module.exports = router;
