@@ -21,9 +21,10 @@ router.post("/name", async function (req, res) {
 });
 
 router.post("/", async function (req, res) {
-  const {name, score} = req.body;
-  const id = await addPlayer(name, score);
-  res.json({ success: true, message: `${name} has been added with id ${id}` });
+    //console.log(req.body);
+    const {name, score} = req.body;
+    const id = await addPlayer(name, score);
+    res.json({ success: true, message: `${name} has been added with id ${id}` });
 });
 
 router.put("/", async function (req, res) {

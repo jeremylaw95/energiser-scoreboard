@@ -47,7 +47,6 @@ async function updatePlayerNameByID(id, name) {
     return result;
 }
 
-
 module.exports = {
     addPlayer,
     getScores,
