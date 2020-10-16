@@ -11,6 +11,8 @@ updateButton.addEventListener("click", updateScore)
 const dropDown = document.querySelector("select");
 const newScore = document.querySelector("#newScore");
 
+//💩
+
 // Load scores into table
 async function getScores() {
     const data = await fetch("http://localhost:3000/scores");
@@ -27,6 +29,8 @@ async function getScores() {
 
         position.innerText = i + 1;
         name.innerText = scores[i].name;
+        if(i === 0) {name.innerText += " 👑"}
+        if(i === scores.length - 1) {name.innerText += " 💩"}
         score.innerText = scores[i].score;
 
         const option = document.createElement("option");
@@ -34,6 +38,7 @@ async function getScores() {
         dropDown.add(option);
 
     }
+
 }
 
 // Add a new name and score

@@ -5,6 +5,14 @@ body {
   list-style-position: inside;
 }
 
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 30px;
+}
+
 a {
   color: #00B7FF;
 }
@@ -38,4 +46,8 @@ input, button, select {
   height: 30px;
   font-size: 18px;
   background-color: aliceblue;
+}
+
+#postData {
+  margin-block-end: 5px;
 }
