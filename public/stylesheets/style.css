@@ -33,7 +33,7 @@ table {
   font-size: 20px;
 }
 
-input, button {
+input, button, select {
   width: 148px;
   height: 30px;
   font-size: 18px;

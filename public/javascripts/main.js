@@ -6,6 +6,11 @@ const form = document.querySelector("#postData");
 const inputName = document.querySelector("#name");
 const inputScore = document.querySelector("#score");
 
+const updateButton = document.querySelector("#updateScore")
+updateButton.addEventListener("click", updateScore)
+const dropDown = document.querySelector("select");
+const inputNewScore = document.querySelector("#newScore");
+
 // Load scores into table
 async function getScores() {
     const data = await fetch("http://localhost:3000/scores");
@@ -23,6 +28,10 @@ async function getScores() {
         position.innerText = i + 1;
         name.innerText = scores[i].name;
         score.innerText = scores[i].score;
+
+        const option = document.createElement("option");
+        option.text = scores[i].name;
+        dropDown.add(option);
 
     }
 }
