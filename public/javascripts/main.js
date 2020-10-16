@@ -39,7 +39,7 @@ async function getScores() {
 // Add a new name and score
 async function postScore() {
 
-    const data = { name: dropDown.value, score: inputScore.value };
+    const data = { name: inputName.value, score: inputScore.value };
 
     // Post data to our API
     const postData = await fetch('http://localhost:3000/scores', {
