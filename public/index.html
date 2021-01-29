@@ -1,35 +1,33 @@
 <html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+  </head>
 
-<head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+  <body>
+    <h1>Energisers Leaderboard</h1>
+    <p>See the scores below and weep!</p>
 
-<body>
-  <h1>Energisers Leaderboard</h1>
-  <p>See the scores below and weep!</p>
+    <table>
+      <tr>
+        <th>Position</th>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </table>
 
-  <table>
-    <tr>
-      <th>Position</th>
-      <th>Name</th>
-      <th>Score</th>
-    </tr>
-  </table>
+    <form id="postData">
+      <input type="text" id="name" placeholder="Name" />
+      <input type="number" id="score" placeholder="Score" />
+      <button>Submit Score</button>
+    </form>
 
-  <form id="postData">
-    <input type="text" id="name" placeholder="Name">
-    <input type="number" id="score" placeholder="Score">
-    <button>Submit Score</button>
-  </form>
+    <form id="putData">
+      <select name="players" id="players" placeholder="Select Player"></select>
+      <input type="number" id="newScore" placeholder="Score" />
+      <button id="updateScore">Update Score</button>
+    </form>
 
-  <form id="putData">
-    <select name="players" id="players" placeholder="Select Player"></select>
-    <input type="number" id="newScore" placeholder="Score">
-    <button id="updateScore">Update Score</button>
-  </form>
-
-  <script src="./javascripts/main.js"></script>
-</body>
-
+    <script src="./javascripts/main.js"></script>
+  </body>
 </html>

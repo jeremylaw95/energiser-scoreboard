@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 40px 'Lucida Grande', Helvetica, Arial, sans-serif;
   text-align: center;
   list-style-position: inside;
 }
@@ -14,20 +14,20 @@ p {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
-
 
 ol {
   padding: 0px;
 }
 
-
 * {
   background-color: cornflowerblue;
 }
 
-table, td, th {
+table,
+td,
+th {
   text-align: left;
   border: 1px solid black;
   padding: 5px;
@@ -41,7 +41,9 @@ table {
   font-size: 20px;
 }
 
-input, button, select {
+input,
+button,
+select {
   width: 148px;
   height: 30px;
   font-size: 18px;

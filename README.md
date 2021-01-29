@@ -1,12 +1,29 @@
-# Energiser Score Tracker
+# Jeremy & Aftab - Energiser ScoreBoard
 
-We will be building our first full stack app. It will be a chance to embed everything we've learnt so far and practice breaking down problems into solvable chunks.
+- **Our Problem**: We have no current way of tracking the scores of each energiser game on the bootcamp.
 
-## Requirements
+- **Solution**: A scoreboard which allows users to view rankings and scores as well as add and update scores.
 
-- Must use a Database for persistent storage
-- Must use the model pattern to allow easy interaction with the data
-- Must use an REST API server to manage requests and serve back data
-- Must have a front end which allows users to at least view the data
+## **Installation and Setup Instructions**
 
-The rest is up to you!
+Example:
+
+Clone down this repository. You will need node and npm installed globally on your machine.
+
+Installation:
+
+```
+npm i
+```
+
+To Start Server:
+
+```
+npm start
+```
+
+To Visit App:
+
+```
+localhost:3000
+```
